@@ -11,7 +11,7 @@ export const TodoItem: React.FC<TodoItemProps> = ({
 	todo,
 	index
 }) => {
-		const {removeTodo, todoToggle} = useContext(TodosContext)
+	const {removeTodo, todoToggle} = useContext(TodosContext)
 	const classTodo: string = todo.completed ? 'todo__completed' : ''
 
 	return (
@@ -22,13 +22,13 @@ export const TodoItem: React.FC<TodoItemProps> = ({
 				<input
 					type="checkbox"
 					checked={todo.completed}
-					onChange={todoToggle.bind(null, todo.id)}
+					onChange={todoToggle!.bind(null, todo.id)}
 				/>
 				<strong>{index + 1}&nbsp;</strong>
 				{todo.title}
 			</span>
 			<button
-				onClick={removeTodo.bind(null, todo.id)}
+				onClick={removeTodo!.bind(null, todo.id)}
 				className="rm"
 			>&times;</button>
 		</li>

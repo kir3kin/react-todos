@@ -1,9 +1,12 @@
 import React, { useState, lazy } from 'react'
 import { TodoList } from './components/TodoList'
-import { iTodoItem } from './interfaces/interfaces'
+import { iTodoItem, iTodosContext } from './interfaces/interfaces'
 import { TodosContext } from './context/TodosContext'
 import { useEffect } from 'react'
 import { TodoLoader } from './components/TodoLoader'
+
+// Todo 
+// ! add localStorage
 
 // import AddTodo from './components/AddTodo'
 // Lazy loading for the AddTodo component
@@ -31,7 +34,7 @@ export const App: React.FC = () => {
       })
   }, [])
 
-  const inputToggle = (id: number): void => {
+  const todoToggle = (id: number): void => {
 		setTodos(todos.map(todo => {
       if (todo.id === id) todo.completed = !todo.completed
       return todo
@@ -52,10 +55,15 @@ export const App: React.FC = () => {
     ]))
   }
 
-  return (
-    // TODO create one object for Todoscontext and properly describe it in interfaces.ts (using !)
+  // to say typescript that we must pass this two mandatory functions
+  // const contextContent: Required<iTodosContext> = {
+  const contextContent: Pick<iTodosContext, 'removeTodo' | 'todoToggle'> = {
+    removeTodo,
+    todoToggle
+  }
 
-    <TodosContext.Provider value={ {removeTodo, todoToggle: inputToggle} }>
+  return (
+    <TodosContext.Provider value={ contextContent }>
       <div className="wrapper">
         <h1>Todos form</h1>
 

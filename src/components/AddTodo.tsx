@@ -1,16 +1,8 @@
 import React, { useState } from "react"
+import { inputValuesOutputType } from "../interfaces/interfaces"
 
 type AddTodoProps = {
 	createTodo: (value: string) => void
-}
-
-type inputValuesOutputType = {
-	attributes: {
-		value: string
-		onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
-	},
-	clear: () => void,
-	value: () => string
 }
 
 // ! cusotm hook for input element

@@ -1,14 +1,4 @@
 import React from "react"
+import { iTodosContext } from "../interfaces/interfaces"
 
-type TodosContextType = {
-	removeTodo(id: number): void
-	todoToggle: (id: number) => void
-}
-
-const tempContext = {
-	removeTodo: () => {},
-	todoToggle: () => {}
-}
-
-export const TodosContext = React.createContext<TodosContextType>(tempContext)
-// export const TodosContext = React.createContext<object>({})
+export const TodosContext = React.createContext<Partial<iTodosContext>>({})
