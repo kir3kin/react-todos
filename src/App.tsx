@@ -30,7 +30,7 @@ export const App: React.FC = () => {
         setTimeout(() => {
           setTodos(todos)
           setLoading(false)
-        }, 2000)
+        }, 1000)
       })
   }, [])
 
@@ -75,7 +75,7 @@ export const App: React.FC = () => {
         {todos.length ? (
           <TodoList todos={todos} />
         ) : loading ? null : (
-          <p>There are no todos left</p>
+          <p className="left-zero">There are no todos left!</p>
         )}
         
       </div>

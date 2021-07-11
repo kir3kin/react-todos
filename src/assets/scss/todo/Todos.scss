@@ -1,8 +1,49 @@
 .todo {
 
+	&__form {
+		margin-bottom: 1rem;
+		box-shadow: 0 0 5px rgba(0,0,0,.2);
+		display: inline-block;
+		padding: 1rem 2rem;
+		border-radius: 20px;
+
+		input {
+			margin-right: 1rem;
+			border-radius: 10px;
+			padding: 0.5rem 0.5rem .4rem;
+			font-size: 1rem;
+			outline: none;
+
+			&::placeholder {
+				color: #aaa;
+			}
+
+		}
+
+		button {
+			padding: 0.5rem 1rem;
+			border-radius: 20px;
+			border: 1px solid #eee;
+			font-weight: bold;
+			box-shadow: 1px 1px 3px rgba(0,0,0,.3), inset 0 0 10px rgba(255,255,255,.6);
+			position: relative;
+			top: -2px;
+			cursor: pointer;
+			transition: .2s linear;
+
+			&:hover {
+				color: darkred;
+				box-shadow: 1px 1px 3px rgba(255,255,255,.3), inset 1px 1px 5px rgba(0,0,0,.5);
+				
+			}
+		}
+	}
+
+
 	&__list {
 		list-style: none;
-		box-shadow: 0 0 5px 3px #000;
+		padding: 2rem;
+		box-shadow: 0 0 5px 3px rgba(0,0,0,.3);
 	}
 
 	&__item {
@@ -12,28 +53,66 @@
 		padding: 0.5rem 1rem;
 		border: 1px solid #eee;
 		border-radius: 4px;
-		margin-bottom: .5rem;
+		transition: .2s linear;
 
 		input {
 			margin-right: .8rem;
+			cursor: pointer;
+		}
+
+		span {
+			font-size: 1.2rem;
+			text-shadow: 1px 1px rgba(#000, .3);
+
+			strong {
+				margin-right: .5rem;
+				border-right: 2px solid #000;
+				border-radius: 50%;
+			}
+		}
+
+		&:hover {
+			background: #eee;
 		}
 	}
 
+	&__item:not(:last-child) {
+		margin-bottom: .5rem;
+	}	
+	
 	&__completed {
 		text-decoration: line-through;
-	}
-
-	&__form {
-		margin-bottom: 1rem;
-		
 	}
 }
 
 .rm {
 	background: darkred;
-	border-radius: 50%;
+	border-radius: 5px;
 	color: #fff;
 	border: none;
 	padding-top: 0.1rem;
 	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	display: block;
+	font-size: 1.5rem;
+
+	transition: .2s linear;
+
+	&:hover {
+		background: lighten(darkred, 20%);
+		color: #000;
+	}
+}
+
+.left-zero {
+	display: block;
+	font-size: 1.5rem;
+	text-decoration: underline;
+	font-weight: bold;
+	padding: 1rem;
+	box-shadow: 0 0 10px rgba(0,0,0,.5);
+	border-radius: 20px;
+	letter-spacing: 2px;
+	text-shadow: 1px 1px 4px rgba(0,0,0,.3);
 }

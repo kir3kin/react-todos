@@ -23,7 +23,7 @@ export const TodoItem: React.FC<TodoItemProps> = ({
 					type="checkbox"
 					checked={todo.completed}
 					onChange={todoToggle!.bind(null, todo.id)}
-				/>
+					/>
 				<strong>{index + 1}&nbsp;</strong>
 				{todo.title}
 			</span>

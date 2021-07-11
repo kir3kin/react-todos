@@ -40,6 +40,7 @@ export const AddTodo: React.FC<AddTodoProps> = ({ createTodo }) => {
 		>
 			<input
 				type="text"
+				placeholder="Add a new todo..."
 				{...input.attributes}
 			/>
 			<button type="submit">Add todo</button>
