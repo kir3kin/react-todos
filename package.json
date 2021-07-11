@@ -1,4 +1,6 @@
 {
+  "author": "Ihor Akhabanin <i.akhabanin@gmail.com>",
+  "description": "Todos form",
   "name": "react_todos",
   "version": "0.1.0",
   "private": true,
