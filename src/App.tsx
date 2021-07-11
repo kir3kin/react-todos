@@ -55,8 +55,8 @@ export const App: React.FC = () => {
     ]))
   }
 
-  // to say typescript that we must pass this two mandatory functions
-  // const contextContent: Required<iTodosContext> = {
+  // to say typescript that we must pass this two mandatory functions, also we can use the next:
+  // * const contextContent: Required<iTodosContext> = {
   const contextContent: Pick<iTodosContext, 'removeTodo' | 'todoToggle'> = {
     removeTodo,
     todoToggle

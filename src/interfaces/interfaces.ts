@@ -13,6 +13,10 @@ export type inputValuesOutputType = {
 	value: () => string
 }
 
+export type AddTodoProps = {
+	createTodo: (value: string) => void
+}
+
 export interface iTodosContext {
 	removeTodo(id: number): void
 	todoToggle: (id: number) => void

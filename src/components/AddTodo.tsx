@@ -1,9 +1,5 @@
 import React, { useState } from "react"
-import { inputValuesOutputType } from "../interfaces/interfaces"
-
-type AddTodoProps = {
-	createTodo: (value: string) => void
-}
+import { AddTodoProps, inputValuesOutputType } from "../interfaces/interfaces"
 
 // ! cusotm hook for input element
 const useInputValues = (defaultValue: string = ''): inputValuesOutputType => {
