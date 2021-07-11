@@ -54,3 +54,6 @@ export const AddTodo: React.FC<AddTodoProps> = ({ createTodo }) => {
 		</form>
 	)
 }
+
+// export default for the lazy loading and to get rid of curly brackets "{}"
+export default AddTodo

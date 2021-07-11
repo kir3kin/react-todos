@@ -29,7 +29,7 @@ export const TodoItem: React.FC<TodoItemProps> = ({
 			</span>
 			<button
 				onClick={removeTodo.bind(null, todo.id)}
-				className="todo__rm"
+				className="rm"
 			>&times;</button>
 		</li>
 	)
