@@ -5,19 +5,11 @@ import { TodosContext } from './context/TodosContext'
 import { useEffect } from 'react'
 import { TodoLoader } from './components/TodoLoader'
 
-// Todo 
-// ! add localStorage
-
 // import AddTodo from './components/AddTodo'
 // Lazy loading for the AddTodo component
 const AddTodo = lazy(() => import('./components/AddTodo'))
 
 export const App: React.FC = () => {
-  // const todoItem = [
-  //   {id: 1, title: 'buy something 1', completed: true},
-  //   {id: 2, title: 'buy something 2', completed: false},
-  //   {id: 3, title: 'buy something 3', completed: false}
-  // ]
   const [todos, setTodos] = useState<iTodoItem[]>([])
   const [loading, setLoading] = useState<boolean>(true)
 

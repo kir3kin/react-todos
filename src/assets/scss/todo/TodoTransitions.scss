@@ -1,0 +1,22 @@
+.todo-item-exit-active {
+  animation: todo .8s ease-out forwards;
+}
+
+.todo-item-enter-active {
+  animation: todo .8s ease-in alternate-reverse;
+}
+
+@keyframes todo {
+  0% {
+    transform: translateX(0)
+  }
+  30% {
+    opacity: 0.7;
+    transform: translateX(30px)
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+}
+
